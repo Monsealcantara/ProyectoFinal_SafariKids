@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="leon" size="1.000000 1.000000" />
     <ImageTarget name="bufalo" size="1.000000 1.000000" />
     <ImageTarget name="jirafa" size="1.000000 1.000000" />
   </Tracking>
