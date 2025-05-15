@@ -5,7 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/SamplesResources/Scenes/0-Main.unity
     guid: a09cb257d566c489595b16ab37547666
+  - enabled: 0
+    path: Assets/Scenes/animales.unity
+    guid: b4957b29ba2d4ed49acb9997bb754668
+  - enabled: 1
+    path: Assets/Scenes/animalesPrueba.unity
+    guid: b0abe557c9f43264ab008fc83101e5fc
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
