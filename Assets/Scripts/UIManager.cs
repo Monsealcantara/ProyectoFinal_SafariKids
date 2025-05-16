@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
         continuarButton.onClick.AddListener(MostrarIconos);
 
         botonMostrarDatos.onClick.AddListener(MostrarDatosCuriosos);
-        botonCerrarDatos.onClick.AddListener(CerrarDatosCuriosos);
+        // botonCerrarDatos.onClick.AddListener(CerrarDatosCuriosos);
 
         botonAbrirConfig.onClick.AddListener(MostrarConfig);
         botonCerrarConfig.onClick.AddListener(CerrarConfig);
@@ -52,10 +52,10 @@ public class UIManager : MonoBehaviour
         datosCuriososPanel.SetActive(true);
     }
 
-    void CerrarDatosCuriosos()
-    {
-        datosCuriososPanel.SetActive(false);
-    }
+    // void CerrarDatosCuriosos()
+    // {
+    //     datosCuriososPanel.SetActive(false);
+    // }
 
     void MostrarConfig()
     {
@@ -77,6 +77,87 @@ public class UIManager : MonoBehaviour
         ayudaPanel.SetActive(false);
     }
 }
+
+
+// using UnityEngine;
+// using UnityEngine.UI;
+
+// public class UIManager : MonoBehaviour
+// {
+//     public GameObject advertenciaPanel;
+//     public GameObject iconosPanel;
+//     public GameObject datosCuriososPanel;
+//     public GameObject configPanel;
+//     public GameObject ayudaPanel;
+
+//     public Button continuarButton;
+//     public Button botonMostrarDatos;
+//     public Button botonCerrarDatos;
+
+//     public Button botonAbrirConfig;
+//     public Button botonCerrarConfig;
+
+//     public Button botonAbrirAyuda;
+//     public Button botonCerrarAyuda;
+
+//     void Start()
+//     {
+//         // Estado inicial
+//         advertenciaPanel.SetActive(true);
+//         iconosPanel.SetActive(false);
+//         datosCuriososPanel.SetActive(false);
+//         configPanel.SetActive(false);
+//         ayudaPanel.SetActive(false);
+
+//         // Asignar listeners
+//         continuarButton.onClick.AddListener(MostrarIconos);
+
+//         botonMostrarDatos.onClick.AddListener(MostrarDatosCuriosos);
+//         botonCerrarDatos.onClick.AddListener(CerrarDatosCuriosos);
+
+//         botonAbrirConfig.onClick.AddListener(MostrarConfig);
+//         botonCerrarConfig.onClick.AddListener(CerrarConfig);
+
+//         // botonAbrirAyuda.onClick.AddListener(MostrarAyuda);
+//         botonCerrarAyuda.onClick.AddListener(CerrarAyuda);
+//     }
+
+//     void MostrarIconos()
+//     {
+//         advertenciaPanel.SetActive(false);
+//         iconosPanel.SetActive(true);
+//     }
+
+//     void MostrarDatosCuriosos()
+//     {
+//         datosCuriososPanel.SetActive(true);
+//     }
+
+//     void CerrarDatosCuriosos()
+//     {
+//         datosCuriososPanel.SetActive(false);
+//     }
+
+//     void MostrarConfig()
+//     {
+//         configPanel.SetActive(true);
+//     }
+
+//     void CerrarConfig()
+//     {
+//         configPanel.SetActive(false);
+//     }
+
+//     void MostrarAyuda()
+//     {
+//         ayudaPanel.SetActive(true);
+//     }
+
+//     void CerrarAyuda()
+//     {
+//         ayudaPanel.SetActive(false);
+//     }
+// }
 
 
 // using UnityEngine;
