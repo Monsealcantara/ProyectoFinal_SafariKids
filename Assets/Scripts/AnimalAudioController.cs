@@ -1,47 +1,55 @@
-using UnityEngine;
-using UnityEngine.UI;
+// using UnityEngine;
+// using UnityEngine.UI;
 
-public class AnimalAudioController : MonoBehaviour
-{
-    public AudioSource audioSource;          // AudioSource con el audio del animal
-    public Button botonInteractivo;          // Botón interactivo general
-    public bool estaVisible = false;         // Estado de visibilidad del Image Target
+// public class AnimalAudioController : MonoBehaviour
+// {
+//     public AudioSource audioSource;
+//     private AnimalInteractionManager manager;
+//     private bool estaVisible = false;
 
-    void Start()
-    {
-        if (botonInteractivo != null)
-        {
-            botonInteractivo.onClick.AddListener(ReproducirAudio);
-        }
+//     void Start()
+//     {
+//         manager = FindObjectOfType<AnimalInteractionManager>();
+//         if (audioSource != null)
+//         {
+//             audioSource.Stop();
+//         }
+//     }
 
-        if (audioSource != null)
-        {
-            audioSource.Stop();
-        }
-    }
+//     void Update()
+//     {
+//         bool activo = gameObject.activeInHierarchy;
+//         if (activo != estaVisible)
+//         {
+//             estaVisible = activo;
+//             if (estaVisible)
+//             {
+//                 manager.RegistrarAudioActivo(this);
+//             }
+//             else if (manager != null)
+//             {
+//                 manager.RegistrarAudioActivo(null);
+//             }
+//             manager.ActualizarBotonInteractivo(estaVisible);
+//         }
+//     }
 
-    void Update()
-    {
-        estaVisible = gameObject.activeInHierarchy;
+//     public void ReproducirAudio()
+//     {
+//         if (audioSource != null)
+//         {
+//             if (!audioSource.isPlaying)
+//                 audioSource.Play();
+//             else
+//                 audioSource.Pause();
+//         }
+//     }
 
-        if (botonInteractivo != null)
-        {
-            botonInteractivo.interactable = estaVisible;
-        }
-    }
-
-    public void ReproducirAudio()
-    {
-        if (estaVisible && audioSource != null)
-        {
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
-            else
-            {
-                audioSource.Stop();
-            }
-        }
-    }
-}
+//     public void DetenerAudio()
+//     {
+//         if (audioSource != null && audioSource.isPlaying)
+//         {
+//             audioSource.Stop();
+//         }
+//     }
+// }

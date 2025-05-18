@@ -32,7 +32,6 @@ public class UIManager : MonoBehaviour
         continuarButton.onClick.AddListener(MostrarIconos);
 
         botonMostrarDatos.onClick.AddListener(MostrarDatosCuriosos);
-        // botonCerrarDatos.onClick.AddListener(CerrarDatosCuriosos);
 
         botonAbrirConfig.onClick.AddListener(MostrarConfig);
         botonCerrarConfig.onClick.AddListener(CerrarConfig);
@@ -51,11 +50,6 @@ public class UIManager : MonoBehaviour
     {
         datosCuriososPanel.SetActive(true);
     }
-
-    // void CerrarDatosCuriosos()
-    // {
-    //     datosCuriososPanel.SetActive(false);
-    // }
 
     void MostrarConfig()
     {

@@ -1,66 +1,59 @@
-using UnityEngine;
-using UnityEngine.UI;
+// using UnityEngine;
+// using UnityEngine.UI;
 
-public class AnimalAnimationController : MonoBehaviour
-{
-    public Animator animator;             // Animator del modelo animal
-    public Button botonInteractivo;      // Botón interactivo común
-    private bool estaVisible = false;    // Controla si el Image Target está visible
-    private bool animacionActiva = false;
+// public class AnimalAnimationController : MonoBehaviour
+// {
+//     public Animator animator;
+//     private AnimalInteractionManager manager;
+//     private bool estaVisible = false;
+//     private bool animacionActiva = false;
 
-    void Start()
-    {
-        if (botonInteractivo != null)
-        {
-            botonInteractivo.onClick.AddListener(ToggleAnimacion);
-        }
+//     void Start()
+//     {
+//         manager = FindObjectOfType<AnimalInteractionManager>();
+//         if (animator != null)
+//             animator.enabled = false;
+//     }
 
-        if (animator != null)
-        {
-            animator.enabled = false;  // La animación inicia desactivada
-        }
-    }
+//     void Update()
+//     {
+//         bool activo = gameObject.activeInHierarchy;
+//         if (activo != estaVisible)
+//         {
+//             estaVisible = activo;
+//             if (estaVisible)
+//             {
+//                 manager.RegistrarAnimActivo(this);
+//             }
+//             else if (manager != null)
+//             {
+//                 manager.RegistrarAnimActivo(null);
+//                 DetenerAnimacion();
+//             }
+//             manager.ActualizarBotonInteractivo(estaVisible);
+//         }
+//     }
 
-    void Update()
-    {
-        estaVisible = gameObject.activeInHierarchy;
+//     public void ToggleAnimacion()
+//     {
+//         if (!estaVisible || animator == null) return;
 
-        // Opcional: habilitar o deshabilitar el botón según visibilidad
-        if (botonInteractivo != null)
-        {
-            botonInteractivo.interactable = estaVisible;
-        }
+//         if (animacionActiva)
+//             DetenerAnimacion();
+//         else
+//             ActivarAnimacion();
+//     }
 
-        // Si el marcador no está visible, asegurarse de detener animación
-        if (!estaVisible && animacionActiva)
-        {
-            DetenerAnimacion();
-        }
-    }
+//     private void ActivarAnimacion()
+//     {
+//         animator.enabled = true;
+//         animacionActiva = true;
+//     }
 
-    public void ToggleAnimacion()
-    {
-        if (!estaVisible || animator == null) return;
+//     public void DetenerAnimacion()
+//     {
+//         animator.enabled = false;
+//         animacionActiva = false;
+//     }
+// }
 
-        if (animacionActiva)
-        {
-            DetenerAnimacion();
-        }
-        else
-        {
-            ActivarAnimacion();
-        }
-    }
-
-    private void ActivarAnimacion()
-    {
-        animator.enabled = true;
-        animacionActiva = true;
-    }
-
-    private void DetenerAnimacion()
-    {
-        animator.enabled = false;
-        animacionActiva = false;
-    }
-}
